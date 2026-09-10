@@ -11,10 +11,11 @@ Radi u browseru i kao PWA, prilagođen je mobitelu, tabletu i desktopu, a podaci
 - **Split Score** i **Split Score Back**
 - **Round the World** — Singles / Doubles / Triples + opcionalni Bull
 - **Checkout Trainer** — PDC / Random / Manual / Crazy
-- **Checkout Challenge · Speed Game** — progresivni put od 2 do 170
+- **Checkout Challenge** — 2 Dart / 3 Dart Finishes s preporučenim checkout rutama
+- **Speed Game** — Easy / Normal / Pro / King, trening na vrijeme
 - **Bob's 27**
 
-Još dolazi: **Speed Game**, detaljniji pregled statistike i dodatni alati za trening.
+
 
 ## Kako se koristi
 
@@ -33,4 +34,9 @@ Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch 
 PikadoBro je još u aktivnom razvoju. Pravila, statistika i UX testiraju se kroz stvarne treninge, pa se detalji mogu mijenjati između verzija.
 
 
-> v0.12: Checkout Challenge koristi preporučene checkout rute i jednostavan IZLAZ/PROMAŠAJ unos.
+> Test build v0.15: sve navedene discipline su aktivne; statistika i JSON Backup / Restore su dostupni s početnog ekrana.
+
+
+## Statistika i backup
+
+PikadoBro prikazuje ukupnu statistiku po disciplinama. Podaci ostaju lokalno u pregledniku. Ugrađeni **JSON Backup / Restore** služi za prijenos ili sigurnosnu kopiju svih PikadoBro podataka.

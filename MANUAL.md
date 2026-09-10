@@ -75,4 +75,9 @@ Checkout Challenge je progresivni trening izlaza s prikazanim rutama.
 Prikazuje preporučenu checkout rutu. U treningu se bilježi samo **IZLAZ** ili **PROMAŠAJ**; broj strelica se ne traži. Promašaj ostavlja igrača na istoj meti. Standardne rute imaju prednost pred matematički mogućim, ali nepraktičnim kombinacijama.
 
 ## Speed Game
-Brzinski trening pod pritiskom. Ukupni trening traje najviše 5 minuta. Svaka meta ima vlastiti timer: Easy 60 s (1–60), Normal 45 s (1–100), Pro 30 s (1–180), King 30 s. Ako vrijeme za metu istekne, bilježi se promašaj i odmah dolazi nova meta. Pogodak ili ručni promašaj također odmah pokreću novu metu. King uvijek traži 150 kao **DB · DB · DB**; tijekom pet minuta možeš napraviti više King pokušaja. PikadoBro prati pokušaje, pogodak %, timeoute, najbolji niz i prosječno vrijeme uspješnog pogotka.
+Brzinski trening pod pritiskom. Ukupni trening traje najviše 5 minuta. Svaka meta ima vlastiti timer: Easy 60 s (1–60), Normal 40 s (1–100), Pro 30 s (1–180), King 25 s. Ako vrijeme za metu istekne, bilježi se promašaj i odmah dolazi nova meta. Pogodak ili ručni promašaj također odmah pokreću novu metu. King uvijek traži 150 kao **DB · DB · DB**; tijekom pet minuta možeš napraviti više King pokušaja. PikadoBro prati pokušaje, pogodak %, timeoute, najbolji niz i prosječno vrijeme uspješnog pogotka.
+
+
+## Statistika i Backup / Restore
+
+Na početnom ekranu otvori **Statistika** za ukupne rezultate po disciplinama. **Backup / Restore** izvozi sve lokalne PikadoBro podatke u JSON datoteku ili ih vraća iz ranije spremljenog backupa. Restore zamjenjuje postojeće PikadoBro podatke.
