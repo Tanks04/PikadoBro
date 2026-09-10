@@ -11,7 +11,7 @@ Radi u browseru i kao PWA, prilagođen je mobitelu, tabletu i desktopu, a podaci
 - **Split Score** i **Split Score Back**
 - **Round the World** — Singles / Doubles / Triples + opcionalni Bull
 - **Checkout Trainer** — PDC / Random / Manual / Crazy
-- **Checkout Challenge** — progresivni put od 2 do 170
+- **Checkout Challenge · Speed Game** — progresivni put od 2 do 170
 - **Bob's 27**
 
 Još dolazi: **Speed Game**, detaljniji pregled statistike i dodatni alati za trening.
