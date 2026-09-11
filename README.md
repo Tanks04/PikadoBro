@@ -1,6 +1,6 @@
 # 🎯 PikadoBro
 
-**Trenutna testna verzija: v0.28 TEST**
+**Trenutna testna verzija: v0.29 TEST**
 
 🇬🇧 **English:** [Open README_EN.md](README_EN.md)
 
@@ -48,7 +48,7 @@ Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch 
 
 ## Status
 
-**Test build v0.28.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.
+**Test build v0.29.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.
 
 
 ## Podrži razvoj
