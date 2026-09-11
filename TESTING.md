@@ -36,7 +36,7 @@ Create some statistics, make a JSON backup, use **Clear all local data**, verify
 
 On a phone and a tablet, open X01 and High Score. Verify all 9 quick-score buttons are visible, the keypad and UNDO are reachable without page scrolling, and rotating/resizing the screen does not leave controls outside the viewport.
 
-## v0.32 regression checks
+## v0.33 regression checks
 
 - X01 Master Out: leaving exactly 1 must be a bust.
 - Start Speed Game, return Home through the game menu, wait longer than the target timer: Home must remain visible; Resume must show `Speed Game · <mode>`.
@@ -44,3 +44,7 @@ On a phone and a tablet, open X01 and High Score. Verify all 9 quick-score butto
 - In timed/Crazy Checkout, return Home: no timer/modal may pull the app back into the game.
 - Export backup in HR and EN: filename should start with PikadoBro / DartsBro respectively, and JSON `version` must match the visible app version.
 - Restore a backup containing an active game: the restored active game should open.
+
+## Landscape regression
+
+Test High Score and X01 in landscape on a phone and on Redmi Pad SE 8.7 (24075RP89G). All keypad buttons (1–9, 0, backspace, enter), all quick scores and UNDO must be visible without vertical scrolling. UNDO must never overlap 5 or 6.

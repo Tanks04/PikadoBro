@@ -1,4 +1,4 @@
-const APP_VERSION = 'v0.32 TEST';
+const APP_VERSION = 'v0.33 TEST';
 const A=document.querySelector('#app');
 const limits={301:10,501:15,701:18,901:21,1001:24};
 const bogeys=new Set([159,162,163,165,166,168,169]);
