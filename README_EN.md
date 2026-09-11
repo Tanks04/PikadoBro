@@ -36,6 +36,8 @@ For faster scoring, the active screen offers direct shortcuts for the selected t
 
 **Automatic:** DartsBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
 
+**Practice for me (AI Mode beta):** choose a 10 / 15 / 20 / 30 / 45 minute workout. A workout is no longer limited to FixTheThing targets: each block can be a FixTheThing target or a complete training discipline such as X01 301 DO, High Score, Split Score / Back, Round the World, Bob's 27, Checkout Trainer or Speed Game. The full plan is always visible and editable, and the player must confirm it before starting. DartsBro can suggest a balanced starter mix and, once enough reliable statistics exist, give priority to weaker targets. The maximum planned workout length is 45 minutes.
+
 ## Statistics and backup
 
 DartsBro stores discipline statistics locally in the browser. Built-in **JSON Backup / Restore** can be used to make a safety copy or move PikadoBro data to another browser/device.
@@ -48,7 +50,7 @@ The app interface supports **Croatian and English**. DartsBro is touch-first, bu
 
 ## Status
 
-**Test build v0.22.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
+**Test build v0.25.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
 
 
 ## Support development

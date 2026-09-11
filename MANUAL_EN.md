@@ -117,3 +117,7 @@ Open **Statistics** from the home screen to view stored results by discipline.
 **Undo can only undo the most recently entered visit once.** It is not a history navigator. After using Undo, it remains disabled until a new score/result is entered.
 
 During active play, double-click or double-tap an empty part of the game screen to open the hidden menu with Resume, Undo, Restart, End, and Home controls.
+
+### Practice for me / AI Mode beta
+
+This lives inside FixTheThing. Choose 10, 15, 20, 30 or 45 minutes. A workout can combine FixTheThing targets with complete training disciplines. Example: FixTheThing 20 → X01 301 Double Out → FixTheThing Bull → Split Score Back. Every block can be changed, removed or added before the workout starts, and nothing begins until you confirm the plan. When enough reliable statistics exist, DartsBro gives priority to weaker targets; without enough data it offers a ready-made balanced mix. The maximum planned workout length is 45 minutes.
