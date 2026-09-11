@@ -1,4 +1,4 @@
-# PikadoBro — Game Manual
+# DartsBro — Game Manual
 
 🇭🇷 **Hrvatski:** [MANUAL.md](MANUAL.md)
 

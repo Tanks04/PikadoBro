@@ -1,8 +1,8 @@
-# 🎯 PikadoBro
+# 🎯 DartsBro
 
 🇭🇷 **Hrvatski:** [Otvori README.md](README.md)
 
-**PikadoBro** is a simple single-player darts training app built for real practice at the board — without unnecessary menus, ads, accounts, or distractions.
+**DartsBro** (Croatian UI: **PikadoBro**) is a simple single-player darts training app built for real practice at the board — without unnecessary menus, ads, accounts, or distractions.
 
 It runs in the browser and can be installed as a PWA. The interface is designed primarily for phones and tablets, while desktop works well for statistics, backup/restore, and reference use. Training data stays local on the device.
 
@@ -20,7 +20,7 @@ It runs in the browser and can be installed as a PWA. The interface is designed 
 
 ## How it works
 
-Choose a game, set up the training session, throw your darts, and enter the result manually. PikadoBro handles game flow and statistics while keeping the active training screen intentionally minimal.
+Choose a game, set up the training session, throw your darts, and enter the result manually. DartsBro handles game flow and statistics while keeping the active training screen intentionally minimal.
 
 During most games, **double-click / double-tap an empty part of the game screen** to open the hidden game menu with Resume, Undo, Restart, End, and Home controls.
 
@@ -34,18 +34,25 @@ If the target is a plain number, any ring on that number counts as one hit: for 
 
 For faster scoring, the active screen offers direct shortcuts for the selected target and its two physical neighbours on a standard dartboard. Live hit totals and percentages are hidden during the session so the player can stay focused on throwing; the full result appears at the end.
 
-**Automatic:** PikadoBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
+**Automatic:** DartsBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
 
 ## Statistics and backup
 
-PikadoBro stores discipline statistics locally in the browser. Built-in **JSON Backup / Restore** can be used to make a safety copy or move PikadoBro data to another browser/device.
+DartsBro stores discipline statistics locally in the browser. Built-in **JSON Backup / Restore** can be used to make a safety copy or move PikadoBro data to another browser/device.
 
-Clearing browser/site data may remove local PikadoBro history unless a backup was created first.
+Clearing browser/site data may remove local DartsBro history unless a backup was created first.
 
 ## Languages and devices
 
-The app interface supports **Croatian and English**. PikadoBro is touch-first, but works on desktop as well. On supported devices it can be installed as a PWA and opened like a normal app.
+The app interface supports **Croatian and English**. DartsBro is touch-first, but works on desktop as well. On supported devices it can be installed as a PWA and opened like a normal app.
 
 ## Status
 
-**Test build v0.20.** All games listed above are active. PikadoBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
+**Test build v0.22.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
+
+
+## Support development
+
+The code, app, and idea are offered for free. If you enjoy DartsBro and it helps your practice, you can send the author a few EUR for a beer or whisk(e)y ❤️ — it may provide extra motivation to turn another idea into a feature.
+
+**Revolut:** https://revolut.me/@ivan50ba6

@@ -1,6 +1,6 @@
 # PikadoBro — Testing Notes
 
-Thanks for testing PikadoBro! 🎯
+Thanks for testing PikadoBro / DartsBro! 🎯
 
 Please use it as a real darts training app, not only by clicking through screens. Useful bug reports include:
 
