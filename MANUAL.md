@@ -81,3 +81,14 @@ Brzinski trening pod pritiskom. Ukupni trening traje najviše 5 minuta. Svaka me
 ## Statistika i Backup / Restore
 
 Na početnom ekranu otvori **Statistika** za ukupne rezultate po disciplinama. **Backup / Restore** izvozi sve lokalne PikadoBro podatke u JSON datoteku ili ih vraća iz ranije spremljenog backupa. Restore zamjenjuje postojeće PikadoBro podatke.
+
+## FixTheThing
+**Custom:** choose a target (1–20, D1–D20, T1–T20, B or DB) and throw 10 rounds / 30 darts. Enter every dart exactly as it landed. `0` is a complete miss. Tap D or T before a number to enter a double/triple. B and DB are direct buttons.
+
+If the target is a plain number, any ring on that number counts as one hit: for target 20, S20, D20 and T20 are all hits. If the target is D20 or T20, only that exact ring counts.
+
+**Automatic:** PikadoBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
+
+
+### FixTheThing v0.17 — focus mode
+Tijekom runde nema live postotka ni broja pogodaka: ekran prikazuje samo **KONCENTRIRAJ SE!**. Za odabrani broj dostupne su direktne kratice S/D/T, a ispod i S/D/T kratice za dva fizički susjedna broja na standardnoj dart ploči. Puna tipkovnica ostaje dostupna za svaki drugi pogodak. Rezultat i postotak prikazuju se tek na kraju treninga.

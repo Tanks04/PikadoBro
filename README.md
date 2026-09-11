@@ -12,31 +12,32 @@ Radi u browseru i kao PWA, prilagođen je mobitelu, tabletu i desktopu, a podaci
 - **Round the World** — Singles / Doubles / Triples + opcionalni Bull
 - **Checkout Trainer** — PDC / Random / Manual / Crazy
 - **Checkout Challenge** — 2 Dart / 3 Dart Finishes s preporučenim checkout rutama
-- **Speed Game** — Easy / Normal / Pro / King, trening na vrijeme
+- **Speed Game** — Easy 60 s / Normal 40 s / Pro 30 s / King 25 s; trening traje 5 minuta
 - **Bob's 27**
-
-
+- **FixTheThing** — Custom / Automatic, fokusirani trening jedne mete
 
 ## Kako se koristi
 
 Odaberi igru, podesi trening i baci strelice. PikadoBro ne pokušava igrati umjesto tebe — rezultat unosiš ručno, a aplikacija vodi tijek igre i statistiku.
 
-Tijekom aktivne igre sučelje je namjerno minimalno. **Dvostruki klik / double-tap na prazni dio ekrana** otvara izbornik za nastavak, restart, završetak igre i povratak na početnu.
+Tijekom aktivne igre sučelje je namjerno minimalno. **Dvostruki klik / double-tap na prazni dio ekrana** otvara izbornik za nastavak, Undo, restart, završetak igre i povratak na početnu.
 
-Detaljna pravila pojedinih treninga nalaze se u [MANUAL.md](MANUAL.md).
+Detaljna pravila pojedinih treninga nalaze se u [MANUAL.md](MANUAL.md). Kratke napomene za testere su u [TESTING.md](TESTING.md).
 
-## Jezik i uređaji
+## FixTheThing
 
-Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch uređaje, ali normalno radi i na desktopu.
+Custom način podržava 1–20, D1–D20, T1–T20, Bull i DB. Sesija traje 10 rundi / 30 strelica i bilježi stvarni pogodak svake strelice. Za brži unos prikazuje kratice za ciljanu metu i susjedne brojeve na ploči. Tijekom treninga nema live postotka — fokus ostaje na bacanju, a rezultat i statistika prikazuju se na kraju.
 
-## Status
-
-PikadoBro je još u aktivnom razvoju. Pravila, statistika i UX testiraju se kroz stvarne treninge, pa se detalji mogu mijenjati između verzija.
-
-
-> Test build v0.15: sve navedene discipline su aktivne; statistika i JSON Backup / Restore su dostupni s početnog ekrana.
-
+Automatic koristi dovoljno pouzdane podatke iz treninga i predlaže mete koje traže dodatni rad. Ne koristi X01 ukupne scoreove za zaključivanje gdje je pojedina strelica završila.
 
 ## Statistika i backup
 
-PikadoBro prikazuje ukupnu statistiku po disciplinama. Podaci ostaju lokalno u pregledniku. Ugrađeni **JSON Backup / Restore** služi za prijenos ili sigurnosnu kopiju svih PikadoBro podataka.
+PikadoBro prikazuje statistiku po disciplinama. Podaci ostaju lokalno u pregledniku. Ugrađeni **JSON Backup / Restore** služi za sigurnosnu kopiju ili prijenos PikadoBro podataka.
+
+## Jezik i uređaji
+
+Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch uređaje, ali normalno radi i na desktopu. Može se instalirati kao PWA na podržanim mobilnim uređajima.
+
+## Status
+
+**Test build v0.18.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.
