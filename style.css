@@ -316,3 +316,84 @@ body.game-active .quickbar{min-width:0;min-height:0}
 .homecompact .wide,.submenu .wide{grid-column:1/-1}
 .homecompact .card,.submenu .card{min-height:88px}
 @media(max-width:520px){.homecompact,.submenu{gap:7px}.homecompact .card,.submenu .card{min-height:78px;padding:10px}}
+
+
+/* v0.35 — Home layout: five equal cards, Popravak centered */
+.homecompact .fix-center{
+  grid-column:1 / -1;
+  justify-self:center;
+  width:calc((100% - 9px)/2);
+  min-height:88px;
+}
+@media(max-width:520px){
+  .homecompact .fix-center{
+    width:calc((100% - 7px)/2);
+    min-height:78px;
+  }
+}
+
+/* v0.36 — 121 gets a compact score-entry layout instead of three giant status rows */
+.one21-play .one21-status{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:7px;
+ margin:6px 0 7px;
+ flex:0 0 auto;
+}
+.one21-play .one21-status>div{
+ border:1px solid var(--line);
+ border-radius:12px;
+ padding:5px 8px;
+ text-align:center;
+ background:#111719;
+}
+.one21-play .one21-status span{
+ display:block;
+ font-size:10px;
+ letter-spacing:.12em;
+ color:var(--muted);
+ font-weight:800;
+}
+.one21-play .one21-status b{
+ display:block;
+ margin-top:1px;
+ font-size:clamp(22px,6vw,34px);
+ line-height:1;
+}
+.one21-play .playarea{
+ margin-top:0;
+ flex:1 1 auto;
+ min-height:0;
+}
+.one21-play .undobtn{flex:0 0 auto}
+
+/* Portrait phones: reserve most of the screen for the complete keypad. */
+@media (orientation:portrait) and (max-width:719px){
+ body.game-active .one21-play{display:flex;flex-direction:column}
+ body.game-active .one21-play .top{flex:0 0 auto}
+ body.game-active .one21-play .one21-status{margin:3px 0 5px;gap:5px}
+ body.game-active .one21-play .one21-status>div{padding:4px}
+ body.game-active .one21-play .one21-status b{font-size:clamp(20px,7vw,30px)}
+ body.game-active .one21-play .error{flex:0 0 auto}
+ body.game-active .one21-play .playarea{flex:1 1 auto;height:auto}
+ body.game-active .one21-play .keys{grid-template-rows:repeat(4,minmax(42px,1fr))}
+ body.game-active .one21-play .undobtn{position:static!important;margin-top:5px}
+}
+
+/* Landscape: status occupies the compact left column, controls keep the full right column. */
+@media (orientation:landscape) and (max-height:620px){
+ body.game-active .one21-play .one21-status{
+   grid-column:1;
+   grid-row:2;
+   display:grid;
+   grid-template-columns:1fr;
+   align-self:start;
+   gap:4px;
+   margin:0;
+ }
+ body.game-active .one21-play .one21-status>div{padding:3px 5px}
+ body.game-active .one21-play .one21-status span{font-size:9px}
+ body.game-active .one21-play .one21-status b{font-size:clamp(18px,6vh,28px)}
+ body.game-active .one21-play .error{grid-column:1;grid-row:2;align-self:end}
+ body.game-active .one21-play .playarea{grid-column:2;grid-row:2}
+}
