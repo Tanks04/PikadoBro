@@ -19,11 +19,11 @@ PikadoBro data is stored locally in the browser/device. Clearing site/browser da
 
 ## FixTheThing checks
 
-- Custom target 20 + `T1, 20, 5` must result in 1/3 hits.
+- Ručno target 20 + `T1, 20, 5` must result in 1/3 hits.
 - Target 20: S20, D20, and T20 must all count as hits.
 - Target D20/T20: only the exact requested ring counts.
 - Target 20 must offer shortcuts for S20/D20/T20 and neighbouring numbers 5 and 1.
 - During the session, there must be no live hit total or percentage.
 - Shortcut buttons must enter exactly one dart and the full keypad must still work.
 - Finish all 10 rounds and verify that FixTheThing appears in Statistics.
-- Automatic must stay locked until enough relevant training data exists; compatible Round the World / Bob's 27 / FixTheThing data may contribute.
+- Automatski must stay locked until enough relevant training data exists; compatible Round the World / Bob's 27 / FixTheThing data may contribute.

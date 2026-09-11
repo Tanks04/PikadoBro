@@ -86,7 +86,7 @@ PikadoBro tracks attempts, hit rate, misses, timeout rate, best streak, and time
 
 FixTheThing is focused practice for one specific number or ring.
 
-### Custom
+### Ručno
 
 Choose a target from **1–20, D1–D20, T1–T20, B, or DB** and throw **10 rounds / 30 darts**.
 
@@ -100,11 +100,11 @@ During the session, live hit totals and percentages are deliberately hidden. The
 
 End-of-session statistics include hit rate, perfect rounds (3/3 hits), blank rounds (0/3 hits), and best hit streak.
 
-### Automatic
+### Automatski
 
 PikadoBro looks for weak targets in compatible training statistics and suggests something worth practising.
 
-Automatic unlocks after at least **10 relevant sessions** and requires at least **15 recorded darts** on a candidate target. PikadoBro only uses sufficiently precise training data. It does not infer individual dart misses from X01 visit totals because those totals do not reveal where each dart landed.
+Automatski unlocks after at least **10 relevant sessions** and requires at least **15 recorded darts** on a candidate target. PikadoBro only uses sufficiently precise training data. It does not infer individual dart misses from X01 visit totals because those totals do not reveal where each dart landed.
 
 ## Statistics and Backup / Restore
 
@@ -118,6 +118,6 @@ Open **Statistics** from the home screen to view stored results by discipline.
 
 During active play, double-click or double-tap an empty part of the game screen to open the hidden menu with Resume, Undo, Restart, End, and Home controls.
 
-### Practice for me / AI Mode beta
+### Moj trening / AI Mode beta
 
 This lives inside FixTheThing. Choose 10, 15, 20, 30 or 45 minutes. A workout can combine FixTheThing targets with complete training disciplines. Example: FixTheThing 20 → X01 301 Double Out → FixTheThing Bull → Split Score Back. Every block can be changed, removed or added before the workout starts, and nothing begins until you confirm the plan. When enough reliable statistics exist, DartsBro gives priority to weaker targets; without enough data it offers a ready-made balanced mix. The maximum planned workout length is 45 minutes.

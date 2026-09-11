@@ -96,14 +96,14 @@ Na početnom ekranu otvori **Statistika** za ukupne rezultate po disciplinama. *
 
 ## Popravak
 
-**Custom:** odaberi metu (1–20, D1–D20, T1–T20, Bull ili DBull) i odigraj 10 rundi / 30 strelica. Svaku strelicu upiši točno onako kako je završila. `0` je potpuni promašaj/felga. Za double ili triple možeš prvo odabrati D ili T pa broj; Bull i DBull imaju direktne tipke.
+**Ručno:** odaberi metu (1–20, D1–D20, T1–T20, Bull ili DBull) i odigraj 10 rundi / 30 strelica. Svaku strelicu upiši točno onako kako je završila. `0` je potpuni promašaj/felga. Za double ili triple možeš prvo odabrati D ili T pa broj; Bull i DBull imaju direktne tipke.
 
 Ako je meta običan broj, svaki prsten tog broja vrijedi kao jedan pogodak. Primjerice, za metu 20 su S20, D20 i T20 svi pogodak. Ako treniraš D20 ili T20, samo taj točan prsten računa se kao pogodak.
 
 Za brži unos aktivni ekran nudi direktne kratice za odabranu metu i njezina dva fizička susjeda na standardnoj dart ploči. Puna tipkovnica ostaje dostupna za svaki drugi pogodak. Tijekom treninga nema live broja pogodaka ni postotka — ekran kaže **KONCENTRIRAJ SE!**, a rezultat i statistika prikazuju se tek na kraju.
 
-**Automatic:** PikadoBro traži slabe mete u kompatibilnim statistikama treninga. Otključava se nakon najmanje 10 relevantnih sesija, a kandidat mora imati najmanje 15 evidentiranih strelica. Dok nema dovoljno podataka, gumb za pokretanje se ne prikazuje. X01 ukupne scoreove ne koristi za zaključivanje gdje je pojedina strelica završila jer ti podaci nisu dovoljno precizni.
+**Automatski:** PikadoBro traži slabe mete u kompatibilnim statistikama treninga. Otključava se nakon najmanje 10 relevantnih sesija, a kandidat mora imati najmanje 15 evidentiranih strelica. Dok nema dovoljno podataka, gumb za pokretanje se ne prikazuje. X01 ukupne scoreove ne koristi za zaključivanje gdje je pojedina strelica završila jer ti podaci nisu dovoljno precizni.
 
-### Practice for me / AI Mode beta
+### Moj trening / AI Mode beta
 
 Nalazi se unutar Popravka. Odaberi 10, 15, 20, 30 ili 45 minuta. Workout može kombinirati mete iz Popravka i cijele discipline. Primjer: Popravak 20 → X01 301 Double Out → Popravak Bull → Split Score Back. Svaki blok možeš promijeniti, maknuti ili dodati prije početka, a plan se pokreće tek nakon tvoje potvrde. Ako postoji dovoljno pouzdane statistike, PikadoBro daje prednost slabijim metama; bez statistike nudi gotovi uravnoteženi miks. Maksimalno planirano trajanje workouta je 45 minuta.

@@ -16,7 +16,7 @@ It runs in the browser and can be installed as a PWA. The interface is designed 
 - **Checkout Challenge** — 2 Dart / 3 Dart Finishes with recommended checkout routes
 - **Speed Game** — Easy 60 s / Normal 40 s / Pro 30 s / King 25 s; sessions last up to 5 minutes
 - **Bob's 27**
-- **FixTheThing** — Custom / Automatic focused target practice
+- **FixTheThing** — Ručno / Automatski focused target practice
 
 ## How it works
 
@@ -28,15 +28,15 @@ Detailed rules for every training mode are in [MANUAL_EN.md](MANUAL_EN.md). Test
 
 ## FixTheThing
 
-**Custom:** choose a target (1–20, D1–D20, T1–T20, B or DB) and throw 10 rounds / 30 darts. Enter every dart exactly as it landed. `0` is a complete miss. Tap D or T before a number to enter a double/triple. B and DB are direct buttons.
+**Ručno:** choose a target (1–20, D1–D20, T1–T20, B or DB) and throw 10 rounds / 30 darts. Enter every dart exactly as it landed. `0` is a complete miss. Tap D or T before a number to enter a double/triple. B and DB are direct buttons.
 
 If the target is a plain number, any ring on that number counts as one hit: for target 20, S20, D20 and T20 are all hits. If the target is D20 or T20, only that exact ring counts.
 
 For faster scoring, the active screen offers direct shortcuts for the selected target and its two physical neighbours on a standard dartboard. Live hit totals and percentages are hidden during the session so the player can stay focused on throwing; the full result appears at the end.
 
-**Automatic:** DartsBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
+**Automatski:** DartsBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
 
-**Practice for me (AI Mode beta):** choose a 10 / 15 / 20 / 30 / 45 minute workout. A workout is no longer limited to FixTheThing targets: each block can be a FixTheThing target or a complete training discipline such as X01 301 DO, High Score, Split Score / Back, Round the World, Bob's 27, Checkout Trainer or Speed Game. The full plan is always visible and editable, and the player must confirm it before starting. DartsBro can suggest a balanced starter mix and, once enough reliable statistics exist, give priority to weaker targets. The maximum planned workout length is 45 minutes.
+**Moj trening (AI Mode beta):** choose a 10 / 15 / 20 / 30 / 45 minute workout. A workout is no longer limited to FixTheThing targets: each block can be a FixTheThing target or a complete training discipline such as X01 301 DO, High Score, Split Score / Back, Round the World, Bob's 27, Checkout Trainer or Speed Game. The full plan is always visible and editable, and the player must confirm it before starting. DartsBro can suggest a balanced starter mix and, once enough reliable statistics exist, give priority to weaker targets. The maximum planned workout length is 45 minutes.
 
 ## Statistics and backup
 
@@ -50,7 +50,7 @@ The app interface supports **Croatian and English**. DartsBro is touch-first, bu
 
 ## Status
 
-**Test build v0.25.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
+**Test build v0.26.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
 
 
 ## Support development
