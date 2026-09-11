@@ -1,30 +1,29 @@
-# PikadoBro — testiranje
+# PikadoBro — Testing Notes
 
-Hvala na testiranju! 🎯
+Thanks for testing PikadoBro! 🎯
 
-Probaj aplikaciju kao pravi trening, ne samo klikanjem kroz ekrane. Posebno javi ako:
+Please use it as a real darts training app, not only by clicking through screens. Useful bug reports include:
 
-- neko pravilo ili bodovanje nije ispravno
-- Undo napravi nešto neočekivano
-- timer u Speed Gameu zapne ili preskoči metu
-- Checkout Trainer / Challenge ponudi ili zabilježi nešto pogrešno
-- aplikacija izgubi rezultat nakon refresh/restarta
-- Backup / Restore ne vrati statistiku
-- nešto izgleda loše ili je teško pritisnuti na mobitelu/tabletu
+- incorrect scoring or game rules
+- Undo behaving unexpectedly
+- Speed Game timers freezing, skipping, or counting incorrectly
+- Checkout Trainer / Challenge offering or recording the wrong result
+- a session disappearing after refresh/restart
+- Backup / Restore failing to restore statistics
+- controls that are difficult to use on a phone or tablet
+- Croatian/English text appearing in the wrong language
 
-Kod prijave buga napiši: **igra + što si napravio + što se dogodilo + što si očekivao**. Screenshot je bonus.
+For a bug report, please include: **game + what you did + what happened + what you expected**. A screenshot is very helpful.
 
-Podaci su lokalni u browseru/uređaju. Brisanje podataka browsera briše i PikadoBro podatke ako prije toga nije napravljen JSON backup.
+PikadoBro data is stored locally in the browser/device. Clearing site/browser data can delete training history unless a JSON backup was created first.
 
-## FixTheThing
-- Try Custom target 20 and enter `T1, 20, 5`: result should be 1/3 hits.
-- Target 20: S20, D20 and T20 must all count as hits.
-- Target D20/T20: only the exact ring counts.
-- Finish all 10 rounds and verify FixTheThing appears in Statistics.
-- Automatic should stay locked until enough relevant training data exists; existing RTW/Bob's 27 data may contribute.
+## FixTheThing checks
 
-
-## FixTheThing v0.17
-- Meta 20 mora ponuditi S20/D20/T20 te kratice za susjede 5 i 1.
-- Tijekom igre ne smije prikazivati live hit score ni postotak.
-- Provjeri da kratice upisuju točno jednu strelicu i da puna tipkovnica i dalje radi.
+- Custom target 20 + `T1, 20, 5` must result in 1/3 hits.
+- Target 20: S20, D20, and T20 must all count as hits.
+- Target D20/T20: only the exact requested ring counts.
+- Target 20 must offer shortcuts for S20/D20/T20 and neighbouring numbers 5 and 1.
+- During the session, there must be no live hit total or percentage.
+- Shortcut buttons must enter exactly one dart and the full keypad must still work.
+- Finish all 10 rounds and verify that FixTheThing appears in Statistics.
+- Automatic must stay locked until enough relevant training data exists; compatible Round the World / Bob's 27 / FixTheThing data may contribute.

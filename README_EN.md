@@ -1,0 +1,51 @@
+# 🎯 PikadoBro
+
+🇭🇷 **Hrvatski:** [Otvori README.md](README.md)
+
+**PikadoBro** is a simple single-player darts training app built for real practice at the board — without unnecessary menus, ads, accounts, or distractions.
+
+It runs in the browser and can be installed as a PWA. The interface is designed primarily for phones and tablets, while desktop works well for statistics, backup/restore, and reference use. Training data stays local on the device.
+
+## Games
+
+- **X01** — 301 / 501 / 701 / 901 / 1001, Double Out or Master Out
+- **High Score** — 7 / 8 / 15 rounds
+- **Split Score** and **Split Score Back**
+- **Round the World** — Singles / Doubles / Triples + optional Bull
+- **Checkout Trainer** — PDC / Random / Manual / Crazy
+- **Checkout Challenge** — 2 Dart / 3 Dart Finishes with recommended checkout routes
+- **Speed Game** — Easy 60 s / Normal 40 s / Pro 30 s / King 25 s; sessions last up to 5 minutes
+- **Bob's 27**
+- **FixTheThing** — Custom / Automatic focused target practice
+
+## How it works
+
+Choose a game, set up the training session, throw your darts, and enter the result manually. PikadoBro handles game flow and statistics while keeping the active training screen intentionally minimal.
+
+During most games, **double-click / double-tap an empty part of the game screen** to open the hidden game menu with Resume, Undo, Restart, End, and Home controls.
+
+Detailed rules for every training mode are in [MANUAL_EN.md](MANUAL_EN.md). Testing notes are in [TESTING.md](TESTING.md).
+
+## FixTheThing
+
+**Custom:** choose a target (1–20, D1–D20, T1–T20, B or DB) and throw 10 rounds / 30 darts. Enter every dart exactly as it landed. `0` is a complete miss. Tap D or T before a number to enter a double/triple. B and DB are direct buttons.
+
+If the target is a plain number, any ring on that number counts as one hit: for target 20, S20, D20 and T20 are all hits. If the target is D20 or T20, only that exact ring counts.
+
+For faster scoring, the active screen offers direct shortcuts for the selected target and its two physical neighbours on a standard dartboard. Live hit totals and percentages are hidden during the session so the player can stay focused on throwing; the full result appears at the end.
+
+**Automatic:** PikadoBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
+
+## Statistics and backup
+
+PikadoBro stores discipline statistics locally in the browser. Built-in **JSON Backup / Restore** can be used to make a safety copy or move PikadoBro data to another browser/device.
+
+Clearing browser/site data may remove local PikadoBro history unless a backup was created first.
+
+## Languages and devices
+
+The app interface supports **Croatian and English**. PikadoBro is touch-first, but works on desktop as well. On supported devices it can be installed as a PWA and opened like a normal app.
+
+## Status
+
+**Test build v0.20.** All games listed above are active. PikadoBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.

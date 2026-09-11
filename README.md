@@ -1,5 +1,7 @@
 # 🎯 PikadoBro
 
+🇬🇧 **English:** [Open README_EN.md](README_EN.md)
+
 **PikadoBro** je jednostavan darts trener za jednog igrača, napravljen za stvarni trening pred pločom — bez nepotrebnih menija, reklama i distrakcija.
 
 Radi u browseru i kao PWA, prilagođen je mobitelu, tabletu i desktopu, a podaci o treningu ostaju lokalno na uređaju.
@@ -24,6 +26,8 @@ Tijekom aktivne igre sučelje je namjerno minimalno. **Dvostruki klik / double-t
 
 Detaljna pravila pojedinih treninga nalaze se u [MANUAL.md](MANUAL.md). Kratke napomene za testere su u [TESTING.md](TESTING.md).
 
+English game manual: [MANUAL_EN.md](MANUAL_EN.md).
+
 ## FixTheThing
 
 Custom način podržava 1–20, D1–D20, T1–T20, Bull i DB. Sesija traje 10 rundi / 30 strelica i bilježi stvarni pogodak svake strelice. Za brži unos prikazuje kratice za ciljanu metu i susjedne brojeve na ploči. Tijekom treninga nema live postotka — fokus ostaje na bacanju, a rezultat i statistika prikazuju se na kraju.
@@ -40,4 +44,4 @@ Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch 
 
 ## Status
 
-**Test build v0.18.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.
+**Test build v0.20.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.

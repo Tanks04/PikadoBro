@@ -1,5 +1,7 @@
 # PikadoBro — kratke upute za igre
 
+🇬🇧 **English:** [MANUAL_EN.md](MANUAL_EN.md)
+
 ## X01
 
 Odaberi **301, 501, 701, 901 ili 1001** te Double Out ili Master Out. Nakon svake runde upiši ukupan rezultat tri strelice. Bust vraća score na stanje prije te runde.
@@ -41,11 +43,21 @@ Checkout Trainer je vježba izlaza; promašaj ne prekida trening. Trening može�
 
 Za svaku rundu označi **IZLAZ** ili **PROMAŠAJ**. PikadoBro broji runde, pogotke, promašaje i checkout postotak.
 
-## Checkout Challenge 2–170
+## Checkout Challenge
 
-Krećeš od **2** i moraš završiti svaki mogući checkout prije nego prijeđeš na sljedeći. Bogey brojevi koji se ne mogu završiti u tri strelice automatski se preskaču.
+Checkout Challenge je progresivni trening checkout ruta s preporučenim izlazima.
 
-Za uspješan izlaz označi je li napravljen s **1, 2 ili 3 strelice**. Ako ne izađeš, odaberi **PROMAŠAJ** i ostaješ na istoj meti. Napredak se sprema pa Challenge možeš nastaviti drugi dan. Nakon 170 počinje novi run od 2, a prethodna povijest ostaje spremljena.
+### 2 Dart Finishes
+
+Ideš redom kroz moguće izlaze od 2 do 100. Trenutnu metu moraš završiti prije prelaska na sljedeću. Brojevi koji se ne mogu završiti u dvije strelice preskaču se.
+
+### 3 Dart Finishes
+
+Ideš kroz moguće izlaze od 99 do 170. Broj 100 pripada 2 Dart disciplini, a standardni bogey brojevi se preskaču.
+
+PikadoBro prikazuje preporučenu praktičnu rutu i, gdje ima smisla, još jednu razumnu alternativu. Namjerno ne prikazuje egzotične rute koje su matematički moguće, ali nisu dobar izbor za trening.
+
+Upisuješ samo **IZLAZ** ili **PROMAŠAJ**. Promašaj te ostavlja na istoj meti. Napredak se automatski sprema. **NOVI CIKLUS** kreće ispočetka, ali čuva povijest prethodnih ciklusa za usporedbu. Povijest se briše zasebno.
 
 ## Bob's 27
 
@@ -83,12 +95,11 @@ Brzinski trening pod pritiskom. Ukupni trening traje najviše 5 minuta. Svaka me
 Na početnom ekranu otvori **Statistika** za ukupne rezultate po disciplinama. **Backup / Restore** izvozi sve lokalne PikadoBro podatke u JSON datoteku ili ih vraća iz ranije spremljenog backupa. Restore zamjenjuje postojeće PikadoBro podatke.
 
 ## FixTheThing
-**Custom:** choose a target (1–20, D1–D20, T1–T20, B or DB) and throw 10 rounds / 30 darts. Enter every dart exactly as it landed. `0` is a complete miss. Tap D or T before a number to enter a double/triple. B and DB are direct buttons.
 
-If the target is a plain number, any ring on that number counts as one hit: for target 20, S20, D20 and T20 are all hits. If the target is D20 or T20, only that exact ring counts.
+**Custom:** odaberi metu (1–20, D1–D20, T1–T20, B ili DB) i odigraj 10 rundi / 30 strelica. Svaku strelicu upiši točno onako kako je završila. `0` je potpuni promašaj/felga. Za double ili triple možeš prvo odabrati D ili T pa broj; B i DB imaju direktne tipke.
 
-**Automatic:** PikadoBro looks for weak targets in compatible training statistics. It unlocks after at least 10 relevant sessions and requires at least 15 recorded darts on a candidate target. It does not infer individual dart misses from X01 totals because those data are not precise enough.
+Ako je meta običan broj, svaki prsten tog broja vrijedi kao jedan pogodak. Primjerice, za metu 20 su S20, D20 i T20 svi pogodak. Ako treniraš D20 ili T20, samo taj točan prsten računa se kao pogodak.
 
+Za brži unos aktivni ekran nudi direktne kratice za odabranu metu i njezina dva fizička susjeda na standardnoj dart ploči. Puna tipkovnica ostaje dostupna za svaki drugi pogodak. Tijekom treninga nema live broja pogodaka ni postotka — ekran kaže **KONCENTRIRAJ SE!**, a rezultat i statistika prikazuju se tek na kraju.
 
-### FixTheThing v0.17 — focus mode
-Tijekom runde nema live postotka ni broja pogodaka: ekran prikazuje samo **KONCENTRIRAJ SE!**. Za odabrani broj dostupne su direktne kratice S/D/T, a ispod i S/D/T kratice za dva fizički susjedna broja na standardnoj dart ploči. Puna tipkovnica ostaje dostupna za svaki drugi pogodak. Rezultat i postotak prikazuju se tek na kraju treninga.
+**Automatic:** PikadoBro traži slabe mete u kompatibilnim statistikama treninga. Otključava se nakon najmanje 10 relevantnih sesija, a kandidat mora imati najmanje 15 evidentiranih strelica. X01 ukupne scoreove ne koristi za zaključivanje gdje je pojedina strelica završila jer ti podaci nisu dovoljno precizni.
