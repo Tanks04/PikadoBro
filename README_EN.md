@@ -1,6 +1,6 @@
 # 🎯 DartsBro
 
-**Current test version: v0.38 TEST**
+**Current test version: v0.39 TEST**
 
 🇭🇷 **Hrvatski:** [Otvori README.md](README.md)
 
@@ -67,15 +67,15 @@ DartsBro stores its data locally on the device. Under **Data / Backup**, **Clear
 
 ### Responsive gameplay screen
 
-v0.38 fits active gameplay to the actual visible viewport. On phones, quick-score buttons use a compact layout while the keypad and UNDO remain inside the visible screen to reduce accidental scrolling during practice.
+v0.39 fits active gameplay to the actual visible viewport. On phones, quick-score buttons use a compact layout while the keypad and UNDO remain inside the visible screen to reduce accidental scrolling during practice.
 
-### v0.38 verified bug fixes
+### v0.39 verified bug fixes
 
-Alongside the responsive gameplay work from v0.31, v0.38 fixes Master Out bust when leaving 1, Resume labels for Speed Game and Checkout Challenge, timers continuing after returning Home, backup version metadata, HR/EN backup filenames, restored active-game routing, and AudioContext cleanup after Crazy-mode beeps.
+Alongside the responsive gameplay work from v0.31, v0.39 fixes Master Out bust when leaving 1, Resume labels for Speed Game and Checkout Challenge, timers continuing after returning Home, backup version metadata, HR/EN backup filenames, restored active-game routing, and AudioContext cleanup after Crazy-mode beeps.
 
 ### Landscape / Redmi Pad SE 8.7
 
-v0.38 adds a dedicated compact landscape layout. The numeric keypad and all quick-score buttons stay inside the visible viewport and UNDO no longer overlays keypad buttons. A small-tablet rule covers 1340×800 / 5:3 devices such as the Redmi Pad SE 8.7.
+v0.39 adds a dedicated compact landscape layout. The numeric keypad and all quick-score buttons stay inside the visible viewport and UNDO no longer overlays keypad buttons. A small-tablet rule covers 1340×800 / 5:3 devices such as the Redmi Pad SE 8.7.
 
-### v0.38
+### v0.39
 The main menu is grouped into **Games**, **Practice Games**, and standalone **FixTheThing**. Added **121**: start at 121, 9 darts; checkout +1, failure -1, minimum 121.

@@ -397,3 +397,20 @@ body.game-active .quickbar{min-width:0;min-height:0}
  body.game-active .one21-play .error{grid-column:1;grid-row:2;align-self:end}
  body.game-active .one21-play .playarea{grid-column:2;grid-row:2}
 }
+
+
+/* v0.39 — consistent centered text on all action/confirmation controls */
+.btn,
+button.btn,
+.modalactions .btn,
+.modal button,
+.play button,
+.setup button,
+.undobtn,
+button[data-a],
+button[data-k],
+button[data-quick]{
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+}
