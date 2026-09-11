@@ -1,5 +1,7 @@
 # 🎯 DartsBro
 
+**Current test version: v0.28 TEST**
+
 🇭🇷 **Hrvatski:** [Otvori README.md](README.md)
 
 **DartsBro** (Croatian UI: **PikadoBro**) is a simple single-player darts training app built for real practice at the board — without unnecessary menus, ads, accounts, or distractions.
@@ -50,7 +52,7 @@ The app interface supports **Croatian and English**. DartsBro is touch-first, bu
 
 ## Status
 
-**Test build v0.26.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
+**Test build v0.28.** All games listed above are active. DartsBro is still being tested in real training sessions, so rules, statistics, and UX details may change between test builds.
 
 
 ## Support development

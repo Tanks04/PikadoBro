@@ -1,5 +1,7 @@
 # 🎯 PikadoBro
 
+**Trenutna testna verzija: v0.28 TEST**
+
 🇬🇧 **English:** [Open README_EN.md](README_EN.md)
 
 **PikadoBro** (u engleskom sučelju **DartsBro**) je jednostavan darts trener za jednog igrača, napravljen za stvarni trening pred pločom — bez nepotrebnih menija, reklama i distrakcija.
@@ -46,7 +48,7 @@ Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch 
 
 ## Status
 
-**Test build v0.26.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.
+**Test build v0.28.** Sve gore navedene discipline su aktivne. PikadoBro je još u aktivnom razvoju; pravila, statistika i UX testiraju se kroz stvarne treninge pa se detalji mogu mijenjati između verzija.
 
 
 ## Podrži razvoj
