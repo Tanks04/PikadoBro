@@ -1,6 +1,6 @@
 # 🎯 PikadoBro
 
-**Trenutna testna verzija: v0.33 TEST**
+**Trenutna testna verzija: v0.34 TEST**
 
 🇬🇧 **English:** [Open README_EN.md](README_EN.md)
 
@@ -63,12 +63,15 @@ PikadoBro sprema podatke lokalno na uređaju. U **Podaci / Backup** postoji opci
 
 ### Prilagodljiv gameplay ekran
 
-v0.33 prilagođava aktivnu igru stvarnoj visini i širini ekrana. Na mobitelima su quick-score tipke složene kompaktnije, a keypad i UNDO ostaju unutar vidljivog prozora kako bi se smanjilo slučajno scrollanje tijekom bacanja.
+v0.34 prilagođava aktivnu igru stvarnoj visini i širini ekrana. Na mobitelima su quick-score tipke složene kompaktnije, a keypad i UNDO ostaju unutar vidljivog prozora kako bi se smanjilo slučajno scrollanje tijekom bacanja.
 
-### v0.33 provjereni bugfixevi
+### v0.34 provjereni bugfixevi
 
-Uz responsive gameplay iz v0.31, v0.33 ispravlja Master Out bust na preostalih 1, Resume oznake za Speed Game i Checkout Challenge, zaustavljanje timera pri povratku na Početnu, oznaku verzije u JSON backupu, HR/EN naziv backup datoteke, povrat aktivne igre nakon restorea i zatvaranje AudioContexta nakon Crazy beepa.
+Uz responsive gameplay iz v0.31, v0.34 ispravlja Master Out bust na preostalih 1, Resume oznake za Speed Game i Checkout Challenge, zaustavljanje timera pri povratku na Početnu, oznaku verzije u JSON backupu, HR/EN naziv backup datoteke, povrat aktivne igre nakon restorea i zatvaranje AudioContexta nakon Crazy beepa.
 
 ### Landscape / Redmi Pad SE 8.7
 
-v0.33 ima poseban compact landscape raspored. Numerička tipkovnica i svi quick-score gumbi moraju ostati unutar vidljivog ekrana, a UNDO više ne smije prekrivati tipke. Posebno je provjeren layout za uređaje klase 1340×800 / 5:3 poput Redmi Pad SE 8.7.
+v0.34 ima poseban compact landscape raspored. Numerička tipkovnica i svi quick-score gumbi moraju ostati unutar vidljivog ekrana, a UNDO više ne smije prekrivati tipke. Posebno je provjeren layout za uređaje klase 1340×800 / 5:3 poput Redmi Pad SE 8.7.
+
+### v0.34
+Glavni izbornik je grupiran u **Igre**, **Trening igre** i zasebni **Popravak**. Dodan je **121**: 121 start, 9 strelica; izlaz +1, neuspjeh -1, minimum 121.

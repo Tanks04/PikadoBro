@@ -310,3 +310,9 @@ body.game-active .quickbar{min-width:0;min-height:0}
   body.game-active .quickbar { gap: 2px; }
   body.game-active .undobtn { min-height: 24px; height: 24px; margin-top: 2px; font-size: 11px; }
 }
+
+/* v0.34 compact categorized home */
+.homecompact,.submenu{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.homecompact .wide,.submenu .wide{grid-column:1/-1}
+.homecompact .card,.submenu .card{min-height:88px}
+@media(max-width:520px){.homecompact,.submenu{gap:7px}.homecompact .card,.submenu .card{min-height:78px;padding:10px}}

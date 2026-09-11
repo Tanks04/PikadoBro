@@ -36,7 +36,7 @@ Create some statistics, make a JSON backup, use **Clear all local data**, verify
 
 On a phone and a tablet, open X01 and High Score. Verify all 9 quick-score buttons are visible, the keypad and UNDO are reachable without page scrolling, and rotating/resizing the screen does not leave controls outside the viewport.
 
-## v0.33 regression checks
+## v0.34 regression checks
 
 - X01 Master Out: leaving exactly 1 must be a bust.
 - Start Speed Game, return Home through the game menu, wait longer than the target timer: Home must remain visible; Resume must show `Speed Game · <mode>`.
