@@ -39,3 +39,152 @@
 .fix-other-label{grid-column:1/-1;text-align:center;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--muted);padding:.15rem 0 .05rem}
 
 .app-version{font-size:.68em;font-weight:600;opacity:.58;white-space:nowrap;margin-left:.35em;vertical-align:baseline}
+
+
+/* v0.31 — responsive gameplay / anti-scroll pass */
+html,body,#app{width:100%;min-height:100%}
+body.game-active{height:100dvh;min-height:100dvh;overflow:hidden}
+body.game-active #app{height:100dvh;overflow:hidden}
+
+/* Active gameplay uses the real visible viewport. Safe-area padding helps installed PWAs. */
+body.game-active .app[data-game-surface]{
+  height:100dvh;
+  min-height:0;
+  max-height:100dvh;
+  overflow:hidden;
+  padding-top:max(10px,env(safe-area-inset-top));
+  padding-right:max(10px,env(safe-area-inset-right));
+  padding-bottom:max(8px,env(safe-area-inset-bottom));
+  padding-left:max(10px,env(safe-area-inset-left));
+}
+
+/* Never let the input side force the whole screen wider/taller. */
+body.game-active .playarea,
+body.game-active .inputside,
+body.game-active .keys,
+body.game-active .quickbar{min-width:0;min-height:0}
+
+@media (max-width:719px){
+  body.game-active .app[data-game-surface]{padding:9px 10px 7px}
+  body.game-active .top{padding-bottom:7px;gap:8px;flex:0 0 auto}
+  body.game-active .title{font-size:clamp(19px,5.6vw,26px);line-height:1.05}
+  body.game-active .roundinfo{font-size:12px;white-space:nowrap}
+
+  /* Scores and recent visits stay visible, but do not consume the phone. */
+  body.game-active .score{
+    font-size:clamp(58px,12dvh,104px);
+    line-height:.9;
+    margin:7px 0 1px
+  }
+  body.game-active .targetscore{font-size:clamp(60px,13dvh,108px)}
+  body.game-active .targetlabel{margin-top:7px;font-size:11px}
+  body.game-active .remaining{font-size:clamp(23px,6vw,34px);margin:2px}
+  body.game-active .visits{gap:5px;margin:5px 0}
+  body.game-active .visit{min-height:36px;padding:5px;font-size:clamp(17px,4.8vw,23px)}
+  body.game-active .error{min-height:16px;margin:1px;font-size:12px}
+
+  /* Numeric games: keypad left, ALL quick scores right.
+     Quick scores become a compact 2 x 5 matrix instead of 9 tall rows. */
+  body.game-active .playarea{
+    grid-template-columns:minmax(0,1fr) clamp(116px,35vw,150px);
+    gap:7px;
+    margin-top:auto;
+    align-items:stretch
+  }
+  body.game-active .inputside{
+    display:grid;
+    grid-template-rows:auto minmax(0,1fr);
+    gap:5px
+  }
+  body.game-active .inputside>.visit.big{
+    min-height:35px;
+    margin:0;
+    padding:3px 6px;
+    font-size:clamp(22px,6vw,30px)
+  }
+  body.game-active .keys{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:repeat(4,minmax(39px,1fr));
+    gap:5px
+  }
+  body.game-active .key{
+    min-height:39px;
+    height:auto;
+    padding:3px;
+    font-size:clamp(19px,5.5vw,27px)
+  }
+  body.game-active .quickbar{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:repeat(5,minmax(0,1fr));
+    gap:5px;
+    height:100%
+  }
+  body.game-active .quick{
+    min-height:0;
+    height:auto;
+    padding:3px 2px;
+    font-size:clamp(13px,3.8vw,18px)
+  }
+
+  /* Undo is always reachable. This is a fallback for unusually short screens. */
+  body.game-active .undobtn{
+    flex:0 0 auto;
+    width:100%;
+    min-height:40px;
+    margin-top:6px;
+    padding:6px 10px;
+    position:relative;
+    z-index:3
+  }
+  body.game-active .gesturehint{height:9px;line-height:5px;font-size:14px}
+
+  /* Trainer games also compact vertically on phones. */
+  body.game-active .split-current{font-size:clamp(20px,5vw,30px);margin:2px 0 5px}
+  body.game-active .hit-four{gap:6px;margin:7px 0 6px}
+  body.game-active .hit-four .markbtn{min-height:clamp(50px,8dvh,68px);font-size:clamp(25px,7vw,38px)}
+  body.game-active .checkout-actions,
+  body.game-active .challenge-actions{gap:7px;margin:8px 0 6px}
+  body.game-active .checkout-actions .markbtn,
+  body.game-active .challenge-actions .markbtn{min-height:clamp(54px,9dvh,72px)}
+  body.game-active .markgrid{gap:5px;margin:5px 0}
+  body.game-active .markbtn{min-height:48px}
+  body.game-active .bull-combos{gap:5px;margin:5px 0}
+  body.game-active .maxnote{margin:5px 0;font-size:11px}
+}
+
+/* Extra compact mode for short phones / landscape / browser chrome eating height. */
+@media (max-width:719px) and (max-height:760px){
+  body.game-active .app[data-game-surface]{padding-top:6px;padding-bottom:4px}
+  body.game-active .top{padding-bottom:5px}
+  body.game-active .score{font-size:clamp(48px,10dvh,76px);margin:4px 0 0}
+  body.game-active .targetscore{font-size:clamp(50px,11dvh,82px)}
+  body.game-active .targetlabel{margin-top:4px}
+  body.game-active .visits{margin:3px 0}
+  body.game-active .visit{min-height:31px;padding:3px;font-size:16px}
+  body.game-active .remaining{font-size:22px}
+  body.game-active .keys{grid-template-rows:repeat(4,minmax(34px,1fr));gap:4px}
+  body.game-active .key{min-height:34px;font-size:19px}
+  body.game-active .quickbar{gap:4px}
+  body.game-active .quick{font-size:13px}
+  body.game-active .undobtn{min-height:36px;margin-top:4px}
+  body.game-active .gesturehint{display:none}
+}
+
+/* Tablets keep roomy controls but use a 3x3 quick-score grid. */
+@media (min-width:720px) and (max-width:999px){
+  body.game-active .playarea{grid-template-columns:minmax(0,1fr) minmax(190px,.55fr)}
+  body.game-active .quickbar{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:repeat(3,minmax(0,1fr));
+    gap:7px
+  }
+  body.game-active .quick{min-height:0}
+}
+
+/* Installed-app viewport/orientation changes should settle immediately. */
+@media (orientation:landscape) and (max-height:620px){
+  body.game-active .score{font-size:clamp(44px,16vh,72px)}
+  body.game-active .visits{margin:2px 0}
+  body.game-active .visit{min-height:28px;padding:2px}
+  body.game-active .undobtn{min-height:34px}
+}

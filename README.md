@@ -1,6 +1,6 @@
 # 🎯 PikadoBro
 
-**Trenutna testna verzija: v0.29 TEST**
+**Trenutna testna verzija: v0.32 TEST**
 
 🇬🇧 **English:** [Open README_EN.md](README_EN.md)
 
@@ -56,3 +56,15 @@ Sučelje podržava **hrvatski i engleski**. Dizajnirano je prvenstveno za touch 
 Kod, aplikacija i ideja ponuđeni su besplatno. Ako ti se PikadoBro sviđa i pomaže u treningu, možeš autoru ubaciti koji EUR za pivu ili whisk(e)y ❤️ — možda tako nastane još koja dobra ideja.
 
 **Revolut:** https://revolut.me/@ivan50ba6
+
+### Privatnost i brisanje podataka
+
+PikadoBro sprema podatke lokalno na uređaju. U **Podaci / Backup** postoji opcija **Obriši sve lokalne podatke** koja trajno briše statistiku, treninge, postavke i aktivnu igru. PWA/aplikacija ostaje instalirana dok je korisnik sam ne ukloni.
+
+### Prilagodljiv gameplay ekran
+
+v0.32 prilagođava aktivnu igru stvarnoj visini i širini ekrana. Na mobitelima su quick-score tipke složene kompaktnije, a keypad i UNDO ostaju unutar vidljivog prozora kako bi se smanjilo slučajno scrollanje tijekom bacanja.
+
+### v0.32 provjereni bugfixevi
+
+Uz responsive gameplay iz v0.31, v0.32 ispravlja Master Out bust na preostalih 1, Resume oznake za Speed Game i Checkout Challenge, zaustavljanje timera pri povratku na Početnu, oznaku verzije u JSON backupu, HR/EN naziv backup datoteke, povrat aktivne igre nakon restorea i zatvaranje AudioContexta nakon Crazy beepa.

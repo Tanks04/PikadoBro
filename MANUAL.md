@@ -107,3 +107,7 @@ Za brži unos aktivni ekran nudi direktne kratice za odabranu metu i njezina dva
 ### Moj trening / AI Mode beta
 
 Nalazi se unutar Popravka. Odaberi 10, 15, 20, 30 ili 45 minuta. Workout može kombinirati mete iz Popravka i cijele discipline. Primjer: Popravak 20 → X01 301 Double Out → Popravak Bull → Split Score Back. Svaki blok možeš promijeniti, maknuti ili dodati prije početka, a plan se pokreće tek nakon tvoje potvrde. Ako postoji dovoljno pouzdane statistike, PikadoBro daje prednost slabijim metama; bez statistike nudi gotovi uravnoteženi miks. Maksimalno planirano trajanje workouta je 45 minuta.
+
+## Podaci / Backup
+
+Uz JSON backup i restore, opcija **Obriši sve lokalne podatke** briše sve PikadoBro podatke spremljene na uređaju. Brisanje se mora dodatno potvrditi i ne može se poništiti.

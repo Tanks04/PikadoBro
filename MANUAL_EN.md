@@ -121,3 +121,7 @@ During active play, double-click or double-tap an empty part of the game screen 
 ### Moj trening / AI Mode beta
 
 This lives inside FixTheThing. Choose 10, 15, 20, 30 or 45 minutes. A workout can combine FixTheThing targets with complete training disciplines. Example: FixTheThing 20 → X01 301 Double Out → FixTheThing Bull → Split Score Back. Every block can be changed, removed or added before the workout starts, and nothing begins until you confirm the plan. When enough reliable statistics exist, DartsBro gives priority to weaker targets; without enough data it offers a ready-made balanced mix. The maximum planned workout length is 45 minutes.
+
+## Data / Backup
+
+Alongside JSON backup and restore, **Clear all local data** removes all DartsBro data stored on the device. The action requires confirmation and cannot be undone.

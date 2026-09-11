@@ -1,6 +1,6 @@
 # 🎯 DartsBro
 
-**Current test version: v0.29 TEST**
+**Current test version: v0.32 TEST**
 
 🇭🇷 **Hrvatski:** [Otvori README.md](README.md)
 
@@ -60,3 +60,15 @@ The app interface supports **Croatian and English**. DartsBro is touch-first, bu
 The code, app, and idea are offered for free. If you enjoy DartsBro and it helps your practice, you can send the author a few EUR for a beer or whisk(e)y ❤️ — it may provide extra motivation to turn another idea into a feature.
 
 **Revolut:** https://revolut.me/@ivan50ba6
+
+### Privacy and clearing data
+
+DartsBro stores its data locally on the device. Under **Data / Backup**, **Clear all local data** permanently removes statistics, workouts, settings and the active game. The installed PWA remains installed until the user removes it.
+
+### Responsive gameplay screen
+
+v0.32 fits active gameplay to the actual visible viewport. On phones, quick-score buttons use a compact layout while the keypad and UNDO remain inside the visible screen to reduce accidental scrolling during practice.
+
+### v0.32 verified bug fixes
+
+Alongside the responsive gameplay work from v0.31, v0.32 fixes Master Out bust when leaving 1, Resume labels for Speed Game and Checkout Challenge, timers continuing after returning Home, backup version metadata, HR/EN backup filenames, restored active-game routing, and AudioContext cleanup after Crazy-mode beeps.
