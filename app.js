@@ -1,4 +1,4 @@
-const APP_VERSION = 'v0.39 TEST';
+const APP_VERSION = 'v0.40 TEST';
 const A=document.querySelector('#app');
 const limits={301:10,501:15,701:18,901:21,1001:24};
 const bogeys=new Set([159,162,163,165,166,168,169]);
@@ -48,7 +48,7 @@ function checkoutSetupView(){
 function checkoutTargetsFor(mode){if(mode==='pdc')return [40,32,36,50,20,8,4,16,24];if(mode==='manual')return checkoutSetup.manual.length?checkoutSetup.manual:[40];return []}
 function randomCheckoutTarget(max=40,avoid=null){let n;do n=2+Math.floor(Math.random()*(max-1));while(n===avoid);return n}
 function randomEvenCheckoutTarget(avoid=null){const vals=[];for(let n=2;n<=40;n+=2)if(n!==avoid)vals.push(n);return vals[Math.floor(Math.random()*vals.length)]}
-function currentCheckoutTarget(){if(state.mode==='random'||state.mode==='crazy')return state.currentTarget;return state.targets[state.results.length%state.targets.length]}
+function currentCheckoutTarget(){if(state.mode==='random'||state.mode==='crazy'||state.mode==='pdc')return state.currentTarget;return state.targets[state.results.length%state.targets.length]}
 function fmtTime(ms){const total=Math.max(0,Math.ceil(ms/1000)),m=Math.floor(total/60),s=total%60;return `${m}:${String(s).padStart(2,'0')}`}
 function clearCheckoutTimers(){clearTimeout(checkoutTimer);checkoutTimer=null;clearInterval(checkoutClock);checkoutClock=null}
 function checkoutLimitReached(){return state.limitType==='rounds'&&state.results.length>=state.maxRounds}
@@ -77,6 +77,7 @@ function submitCheckoutResult(hit){
   const target=currentCheckoutTarget(),r={target,hit,round:state.results.length+1,reaction:state.mode==='crazy'?Date.now()-state.changedAt:null};
  state.results.push(r);state.canUndo=true;
  if(state.mode==='random')state.currentTarget=randomCheckoutTarget(40,target);
+ if(state.mode==='pdc')state.currentTarget=state.targets[Math.floor(Math.random()*state.targets.length)];
  if(state.mode==='crazy'){state.currentTarget=randomEvenCheckoutTarget(target);state.ready=true;state.flash=false;state.changedAt=Date.now();state.nextChange=Date.now()+5000+Math.floor(Math.random()*10001)}
  save();
  if(checkoutLimitReached())return finishCheckout('rounds');
@@ -93,7 +94,7 @@ function finishCheckout(reason='done'){
 }
 function startCheckout(mode=checkoutSetup.mode,limitType=checkoutSetup.limitType,rounds=checkoutSetup.rounds,minutes=checkoutSetup.minutes,manualTargets=null){
  clearCheckoutTimers();const targets=manualTargets||(mode==='manual'?(checkoutSetup.manual.length?checkoutSetup.manual:[40]):checkoutTargetsFor(mode)),now=Date.now();
- state={type:'checkout',mode,limitType,maxRounds:limitType==='rounds'?+rounds:null,minutes:limitType==='time'?+minutes:null,deadline:limitType==='time'?now+(+minutes*60000):null,targets,targetIndex:0,currentTarget:mode==='random'?randomCheckoutTarget(40):mode==='crazy'?randomEvenCheckoutTarget():null,results:[],canUndo:false,ready:true,flash:false,nextChange:null,changedAt:mode==='crazy'?now:null,started:now};
+ state={type:'checkout',mode,limitType,maxRounds:limitType==='rounds'?+rounds:null,minutes:limitType==='time'?+minutes:null,deadline:limitType==='time'?now+(+minutes*60000):null,targets,targetIndex:0,currentTarget:mode==='random'?randomCheckoutTarget(40):mode==='crazy'?randomEvenCheckoutTarget():mode==='pdc'?targets[Math.floor(Math.random()*targets.length)]:null,results:[],canUndo:false,ready:true,flash:false,nextChange:null,changedAt:mode==='crazy'?now:null,started:now};
  save();route='checkoutPlay';render()
 }
 
