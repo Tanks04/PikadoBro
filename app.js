@@ -1,4 +1,4 @@
-const APP_VERSION = 'v0.40 TEST';
+const APP_VERSION = 'v0.41 TEST';
 const A=document.querySelector('#app');
 const limits={301:10,501:15,701:18,901:21,1001:24};
 const bogeys=new Set([159,162,163,165,166,168,169]);
@@ -315,6 +315,8 @@ function undo121(){if(!state?.canUndo||!state.undoState)return;state=state.undoS
 function save121Result(hit,target,dart=0){let x;try{x=JSON.parse(localStorage.getItem('pb-121-stats')||'{}')}catch{x={}}x.attempts=(x.attempts||0)+1;x.checkouts=(x.checkouts||0)+(hit?1:0);x.highest=Math.max(x.highest||121,hit?target:121);x.lastTarget=target;x.lastHit=hit;x.lastDart=dart;localStorage.setItem('pb-121-stats',JSON.stringify(x))}
 function render(){
  syncAppIdentity();
+ document.body.classList.toggle('lang-hr',lang==='hr');
+ document.body.classList.toggle('lang-en',lang==='en');
  const activeGameRoutes=new Set(['play','highPlay','splitPlay','rtwPlay','bobsPlay','checkoutPlay','challengePlay','speedPlay','fixPlay','one21Play']);
  document.body.classList.toggle('game-active',activeGameRoutes.has(route));
  if(route==='home')home();else if(route==='gamesMenu')gamesMenuView();else if(route==='practiceMenu')practiceMenuView();else if(route==='one21Play')one21Play();else if(route==='stats')statsView();else if(route==='data')dataView();else if(route==='setup')setupView();else if(route==='highSetup')highSetupView();else if(route==='splitSetup')splitSetupView();else if(route==='highPlay')highPlay();else if(route==='splitPlay')splitPlay();else if(route==='rtwSetup')rtwSetupView();else if(route==='rtwPlay')rtwPlay();else if(route==='bobsPlay')bobsPlay();else if(route==='checkoutSetup')checkoutSetupView();else if(route==='checkoutPlay')checkoutPlay();else if(route==='challengeSetup')challengeSetupView();else if(route==='challengePlay')challengePlay();else if(route==='speedSetup')speedSetupView();else if(route==='speedPlay')speedPlay();else if(route==='fixSetup')fixSetupView();else if(route==='fixPlay')fixPlay();else play()
