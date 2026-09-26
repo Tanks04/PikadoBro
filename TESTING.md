@@ -36,7 +36,7 @@ Create some statistics, make a JSON backup, use **Clear all local data**, verify
 
 On a phone and a tablet, open X01 and High Score. Verify all 9 quick-score buttons are visible, the keypad and UNDO are reachable without page scrolling, and rotating/resizing the screen does not leave controls outside the viewport.
 
-## v0.41 regression checks
+## v0.42 regression checks
 
 - X01 Master Out: leaving exactly 1 must be a bust.
 - Start Speed Game, return Home through the game menu, wait longer than the target timer: Home must remain visible; Resume must show `Speed Game · <mode>`.
@@ -50,7 +50,7 @@ On a phone and a tablet, open X01 and High Score. Verify all 9 quick-score butto
 Test High Score and X01 in landscape on a phone and on Redmi Pad SE 8.7 (24075RP89G). All keypad buttons (1–9, 0, backspace, enter), all quick scores and UNDO must be visible without vertical scrolling. UNDO must never overlap 5 or 6.
 
 
-## v0.41 responsive pass
+## v0.42 responsive pass
 - HR: provjeri centriranje tekstova na svim akcijskim/potvrdnim gumbima.
 - Landscape telefon: brojke 0–9 i quick score moraju biti jasno čitljivi i lako dodirljivi bez scrollanja.
 - Redmi Pad SE 8.7 (1340×800): provjeri X01, High Score i 121 u landscapeu; keypad, quick score i Undo moraju stati u viewport.

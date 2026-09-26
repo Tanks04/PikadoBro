@@ -549,3 +549,66 @@ body.lang-hr .card small{font-size:12px;line-height:1.2}
   body.game-active .key{font-size:clamp(28px,5vh,38px)}
   body.game-active .quick{font-size:clamp(21px,3.8vh,29px)}
 }
+
+
+/* v0.42: Split Score numeric rounds need a dedicated landscape workspace.
+   Earlier landscape rules set a 340–460px keypad AFTER the full score header;
+   the fourth keypad row and OK ended up below the visible browser viewport. */
+@media (orientation:landscape) {
+  body.game-active .split-game:has(.splitinput) {
+    width:100%; max-width:none;
+    display:grid;
+    grid-template-columns:minmax(0, .88fr) minmax(0, 1.12fr);
+    grid-template-rows:auto auto auto auto minmax(0,1fr) auto;
+    column-gap:clamp(12px,2vw,28px);
+    row-gap:2px;
+    overflow:hidden;
+    padding:5px 10px max(5px,env(safe-area-inset-bottom));
+  }
+  body.game-active .split-game:has(.splitinput)>.top {grid-column:1/-1;grid-row:1;min-height:0;padding-bottom:2px}
+  body.game-active .split-game:has(.splitinput)>.targetlabel {grid-column:1;grid-row:2;align-self:end;margin:2px 0 0}
+  body.game-active .split-game:has(.splitinput)>.targetscore {grid-column:1;grid-row:3;align-self:center;font-size:clamp(30px,6vw,66px);line-height:1;margin:2px 0}
+  body.game-active .split-game:has(.splitinput)>.split-current {grid-column:1;grid-row:4;font-size:clamp(23px,3.8vw,42px);margin:2px 0}
+  body.game-active .split-game:has(.splitinput)>.visits {grid-column:1;grid-row:5;align-self:start;display:grid;grid-template-columns:1fr;gap:3px;margin:6px 0;min-width:0}
+  body.game-active .split-game:has(.splitinput)>.visits>.visit {min-height:24px;padding:3px;font-size:clamp(13px,1.7vw,20px)}
+  body.game-active .split-game:has(.splitinput)>.error {grid-column:1;grid-row:6;min-height:0;margin:0}
+  body.game-active .split-game:has(.splitinput)>.splitinput {
+    grid-column:2;grid-row:2/6;min-width:0;min-height:0;
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  body.game-active .split-game:has(.splitinput)>.splitinput>.targetlabel {flex:0 0 auto;margin:0 0 3px;font-size:12px}
+  body.game-active .split-game:has(.splitinput) .playarea {
+    flex:1 1 auto;display:grid;grid-template-columns:minmax(0,1fr);
+    width:100%;height:auto;min-height:0;margin:0;gap:0;
+  }
+  body.game-active .split-game:has(.splitinput) .inputside {
+    height:100%;min-height:0;display:grid;
+    grid-template-rows:clamp(30px,5.5dvh,44px) minmax(0,1fr);gap:5px;
+  }
+  body.game-active .split-game:has(.splitinput) .inputside>.visit.big {
+    min-height:0;height:auto;margin:0;padding:1px;
+    font-size:clamp(22px,4.5dvh,32px);
+  }
+  body.game-active .split-game:has(.splitinput) .keys {
+    min-height:0;height:100%;display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-rows:repeat(4,minmax(0,1fr));gap:5px;
+  }
+  body.game-active .split-game:has(.splitinput) .key {
+    min-height:0;height:100%;padding:0 4px;
+    font-size:clamp(21px,4.4dvh,34px);line-height:1;
+  }
+  body.game-active .split-game:has(.splitinput)>.undobtn {
+    grid-column:2;grid-row:6;justify-self:stretch;align-self:end;
+    width:100%;max-width:none;min-height:32px;height:32px;
+    margin:3px 0 0;padding:2px;
+  }
+  body.game-active .split-game:has(.splitinput)>.gesturehint {display:none}
+}
+@media (orientation:landscape) and (max-height:500px) {
+  body.game-active .split-game:has(.splitinput)>.targetscore {font-size:clamp(28px,7dvh,42px)}
+  body.game-active .split-game:has(.splitinput)>.split-current {font-size:clamp(19px,5dvh,29px)}
+  body.game-active .split-game:has(.splitinput)>.visits>.visit {min-height:20px;font-size:12px}
+  body.game-active .split-game:has(.splitinput) .keys {gap:3px}
+  body.game-active .split-game:has(.splitinput)>.undobtn {height:28px;min-height:28px}
+}
