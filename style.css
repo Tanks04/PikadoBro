@@ -551,64 +551,109 @@ body.lang-hr .card small{font-size:12px;line-height:1.2}
 }
 
 
-/* v0.42: Split Score numeric rounds need a dedicated landscape workspace.
-   Earlier landscape rules set a 340–460px keypad AFTER the full score header;
-   the fourth keypad row and OK ended up below the visible browser viewport. */
+
+
+/* v0.43 — one landscape scoreboard layout for ALL Split Score rounds and
+   shared X01 / High Score numeric entry. Height is the actual visible viewport. */
 @media (orientation:landscape) {
-  body.game-active .split-game:has(.splitinput) {
-    width:100%; max-width:none;
-    display:grid;
-    grid-template-columns:minmax(0, .88fr) minmax(0, 1.12fr);
-    grid-template-rows:auto auto auto auto minmax(0,1fr) auto;
-    column-gap:clamp(12px,2vw,28px);
-    row-gap:2px;
-    overflow:hidden;
-    padding:5px 10px max(5px,env(safe-area-inset-bottom));
-  }
-  body.game-active .split-game:has(.splitinput)>.top {grid-column:1/-1;grid-row:1;min-height:0;padding-bottom:2px}
-  body.game-active .split-game:has(.splitinput)>.targetlabel {grid-column:1;grid-row:2;align-self:end;margin:2px 0 0}
-  body.game-active .split-game:has(.splitinput)>.targetscore {grid-column:1;grid-row:3;align-self:center;font-size:clamp(30px,6vw,66px);line-height:1;margin:2px 0}
-  body.game-active .split-game:has(.splitinput)>.split-current {grid-column:1;grid-row:4;font-size:clamp(23px,3.8vw,42px);margin:2px 0}
-  body.game-active .split-game:has(.splitinput)>.visits {grid-column:1;grid-row:5;align-self:start;display:grid;grid-template-columns:1fr;gap:3px;margin:6px 0;min-width:0}
-  body.game-active .split-game:has(.splitinput)>.visits>.visit {min-height:24px;padding:3px;font-size:clamp(13px,1.7vw,20px)}
-  body.game-active .split-game:has(.splitinput)>.error {grid-column:1;grid-row:6;min-height:0;margin:0}
-  body.game-active .split-game:has(.splitinput)>.splitinput {
-    grid-column:2;grid-row:2/6;min-width:0;min-height:0;
-    display:flex;flex-direction:column;overflow:hidden;
-  }
-  body.game-active .split-game:has(.splitinput)>.splitinput>.targetlabel {flex:0 0 auto;margin:0 0 3px;font-size:12px}
-  body.game-active .split-game:has(.splitinput) .playarea {
-    flex:1 1 auto;display:grid;grid-template-columns:minmax(0,1fr);
-    width:100%;height:auto;min-height:0;margin:0;gap:0;
-  }
-  body.game-active .split-game:has(.splitinput) .inputside {
-    height:100%;min-height:0;display:grid;
-    grid-template-rows:clamp(30px,5.5dvh,44px) minmax(0,1fr);gap:5px;
-  }
-  body.game-active .split-game:has(.splitinput) .inputside>.visit.big {
-    min-height:0;height:auto;margin:0;padding:1px;
-    font-size:clamp(22px,4.5dvh,32px);
-  }
-  body.game-active .split-game:has(.splitinput) .keys {
-    min-height:0;height:100%;display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    grid-template-rows:repeat(4,minmax(0,1fr));gap:5px;
-  }
-  body.game-active .split-game:has(.splitinput) .key {
-    min-height:0;height:100%;padding:0 4px;
-    font-size:clamp(21px,4.4dvh,34px);line-height:1;
-  }
-  body.game-active .split-game:has(.splitinput)>.undobtn {
-    grid-column:2;grid-row:6;justify-self:stretch;align-self:end;
-    width:100%;max-width:none;min-height:32px;height:32px;
-    margin:3px 0 0;padding:2px;
-  }
-  body.game-active .split-game:has(.splitinput)>.gesturehint {display:none}
+ body.game-active .split-game,
+ body.game-active .play-screen,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game){
+   width:100%;max-width:none; height:100dvh; min-height:0; max-height:100dvh;
+   display:grid; grid-template-columns:minmax(0, .82fr) minmax(0,1.18fr);
+   grid-template-rows:34px auto auto auto minmax(0,1fr) 35px;
+   gap:2px clamp(10px,1.6vw,22px); overflow:hidden;
+   padding:4px 10px max(5px,env(safe-area-inset-bottom));
+ }
+ body.game-active .split-game>.top,
+ body.game-active .play-screen>.top,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.top{grid-column:1/-1;grid-row:1;min-height:0;padding:0}
+ /* Split Score: left scoreboard, all entry types (marks, bull, numeric) on right. */
+ body.game-active .split-game>.targetlabel{grid-column:1;grid-row:2;margin:4px 0 0;align-self:end;font-size:clamp(12px,2dvh,17px)}
+ body.game-active .split-game>.targetscore,
+ body.game-active .split-game>.targetscore.word-target{grid-column:1;grid-row:3;align-self:center;
+   font-size:clamp(62px,9vw,112px);line-height:1;margin:1px 0 3px;min-width:0}
+ body.game-active .split-game>.targetscore.word-target{font-size:clamp(44px,6.6vw,86px)}
+ body.game-active .split-game>.split-current{grid-column:1;grid-row:4;align-self:center;
+   font-size:clamp(43px,5.2vw,68px);line-height:1.12;margin:3px 0 7px}
+ body.game-active .split-game>.visits{grid-column:1;grid-row:5;align-self:start;
+   display:grid;grid-template-columns:1fr;gap:4px;width:100%;margin:2px 0;min-width:0}
+ body.game-active .split-game>.visits>.visit{min-height:35px;padding:5px 4px;font-size:clamp(20px,2.2vw,29px)}
+ body.game-active .split-game>.error{grid-column:1;grid-row:6;align-self:end;min-height:0;margin:0}
+ body.game-active .split-game>.splitinput,
+ body.game-active .split-game>.markgrid,
+ body.game-active .split-game>.bull-combos{grid-column:2;grid-row:2/6;min-width:0;min-height:0;margin:0}
+ body.game-active .split-game>.splitinput{display:flex;flex-direction:column;overflow:hidden}
+ body.game-active .split-game>.splitinput>.targetlabel{flex:0 0 auto;margin:0 0 3px;font-size:clamp(12px,2.4dvh,17px)}
+ body.game-active .split-game>.splitinput .playarea{flex:1 1 auto;display:grid;grid-template-columns:1fr;
+   width:100%;height:auto;min-height:0;margin:0;gap:0}
+ body.game-active .split-game>.splitinput .inputside{height:100%;min-height:0;display:grid;
+   grid-template-rows:clamp(33px,7dvh,49px) minmax(0,1fr);gap:5px}
+ body.game-active .split-game>.splitinput .inputside>.visit.big{height:auto;min-height:0;margin:0;padding:2px;
+   font-size:clamp(26px,5dvh,38px)}
+ body.game-active .split-game>.splitinput .keys{height:100%;min-height:0;display:grid;
+   grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:5px}
+ body.game-active .split-game>.splitinput .key{height:100%;min-height:0;padding:0 4px;
+   font-size:clamp(25px,5dvh,37px);line-height:1}
+ body.game-active .split-game>.markgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+   grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;align-self:stretch}
+ body.game-active .split-game>.markgrid .markbtn{height:100%;min-height:0;font-size:clamp(30px,6dvh,50px);padding:3px}
+ body.game-active .split-game>.bull-combos{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+   grid-template-rows:repeat(2,minmax(0,1fr));gap:7px;align-self:stretch}
+ body.game-active .split-game>.bull-combos .markbtn{height:100%;min-height:0;padding:3px;font-size:clamp(17px,3dvh,25px)}
+ body.game-active .split-game>.undobtn{grid-column:2;grid-row:6;justify-self:stretch;align-self:stretch;
+   width:100%;max-width:none;min-height:0;height:100%;margin:0;padding:2px;font-size:16px}
+ body.game-active .split-game>.gesturehint{display:none}
+ /* X01 and High Score: same right-side full-height 4-row keypad + quick scores. */
+ body.game-active .play-screen>.score,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.score{grid-column:1;grid-row:2;
+   font-size:clamp(76px,13dvh,120px);line-height:1;margin:4px 0}
+ body.game-active .play-screen>.checkoutflag{grid-column:1;grid-row:3;align-self:start;justify-self:center;
+   margin:2px auto;max-width:100%;z-index:1}
+ body.game-active .play-screen>.visits,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.visits{grid-column:1;grid-row:4;
+   width:100%;max-width:none;align-self:start;margin:5px 0;gap:4px}
+ body.game-active .play-screen>.visits>.visit,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.visits>.visit{min-height:40px;font-size:clamp(18px,3dvh,26px)}
+ body.game-active .play-screen>.remaining{grid-column:1;grid-row:5;align-self:start;
+   font-size:clamp(32px,5dvh,52px);margin:5px 0}
+ body.game-active .play-screen>.error,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.error{grid-column:1;grid-row:6;min-height:0;margin:0}
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.targetlabel{grid-column:1;grid-row:2;align-self:start;margin:0}
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.score{align-self:center}
+ body.game-active .play-screen>.playarea,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea{
+   grid-column:2;grid-row:2/6;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);
+   gap:6px;width:100%;height:100%;min-height:0;margin:0;align-self:stretch}
+ body.game-active .play-screen>.playarea .inputside,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea .inputside{
+   height:100%;min-height:0;display:grid;grid-template-rows:clamp(33px,7dvh,49px) minmax(0,1fr);gap:5px}
+ body.game-active .play-screen>.playarea .inputside>.visit.big,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea .inputside>.visit.big{
+   height:auto;min-height:0;margin:0;padding:2px;font-size:clamp(26px,5dvh,38px)}
+ body.game-active .play-screen>.playarea .keys,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea .keys{
+   height:100%;min-height:0;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:5px}
+ body.game-active .play-screen>.playarea .key,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea .key{
+   height:100%;min-height:0;padding:0 3px;font-size:clamp(24px,5dvh,36px)}
+ body.game-active .play-screen>.playarea .quickbar,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea .quickbar{
+   height:100%;min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+   grid-template-rows:repeat(5,minmax(0,1fr));gap:5px}
+ body.game-active .play-screen>.playarea .quick,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.playarea .quick{
+   height:100%;min-height:0;padding:1px;font-size:clamp(19px,3.7dvh,28px)}
+ body.game-active .play-screen>.undobtn,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.undobtn{
+   grid-column:2;grid-row:6;width:100%;max-width:none;height:100%;min-height:0;
+   margin:0;padding:2px;font-size:16px}
+ body.game-active .play-screen>.gesturehint,
+ body.game-active .trainer-screen:has(> .playarea):not(.one21-play):not(.split-game)>.gesturehint{display:none}
 }
-@media (orientation:landscape) and (max-height:500px) {
-  body.game-active .split-game:has(.splitinput)>.targetscore {font-size:clamp(28px,7dvh,42px)}
-  body.game-active .split-game:has(.splitinput)>.split-current {font-size:clamp(19px,5dvh,29px)}
-  body.game-active .split-game:has(.splitinput)>.visits>.visit {min-height:20px;font-size:12px}
-  body.game-active .split-game:has(.splitinput) .keys {gap:3px}
-  body.game-active .split-game:has(.splitinput)>.undobtn {height:28px;min-height:28px}
+@media (orientation:landscape) and (max-height:450px){
+ body.game-active .split-game>.targetscore{font-size:clamp(45px,10dvh,65px)}
+ body.game-active .split-game>.targetscore.word-target{font-size:clamp(35px,8dvh,52px)}
+ body.game-active .split-game>.split-current{font-size:clamp(30px,7dvh,45px)}
+ body.game-active .split-game>.visits>.visit{min-height:24px;font-size:16px;padding:2px}
 }
