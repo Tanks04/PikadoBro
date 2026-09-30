@@ -6,6 +6,8 @@
 
 **PikadoBro** (u engleskom sučelju **DartsBro**) je jednostavan darts trener za jednog igrača, napravljen za stvarni trening pred pločom — bez nepotrebnih menija, reklama i distrakcija.
 
+Direct link: https://tanks04.github.io/PikadoBro/
+
 Radi u browseru i kao PWA, prilagođen je mobitelu, tabletu i desktopu, a podaci o treningu ostaju lokalno na uređaju.
 
 ## Igre
